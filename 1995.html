@@ -5,17 +5,38 @@
   <title>NetSpace Navigator - 1995</title>
   <style>
     body {
-      background-color: #e0e0e0;
+      margin: 0;
       font-family: "Times New Roman", serif;
+    }
+
+    #loading {
+      background-color: #000;
+      color: #00ff00;
+      font-size: 30px;
+      text-align: center;
+      padding-top: 200px;
+      height: 100vh;
+      animation: blink 1s step-start 0s infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    #main-content {
+      display: none;
+      background-color: #e0e0e0;
       color: #000;
       text-align: center;
       padding: 40px;
     }
-    h1 {
+
+    #main-content h1 {
       font-size: 40px;
       text-decoration: underline;
       color: #003366;
     }
+
     .links a {
       display: block;
       margin: 15px;
@@ -23,18 +44,22 @@
       color: blue;
       text-decoration: underline;
     }
+
     .search-box {
       margin-top: 30px;
     }
+
     input[type="text"] {
       width: 300px;
       padding: 5px;
       font-size: 16px;
     }
+
     input[type="submit"] {
       padding: 5px 10px;
       font-size: 16px;
     }
+
     .footer {
       margin-top: 60px;
       font-size: 12px;
@@ -43,25 +68,38 @@
   </style>
 </head>
 <body>
-  <h1>Welcome to NetSpace Navigator</h1>
 
-  <div class="search-box">
-    <form>
-      <input type="text" placeholder="Search the Web...">
-      <input type="submit" value="Search">
-    </form>
+  <div id="loading">Conectando a NetSpace...</div>
+
+  <div id="main-content">
+    <h1>Welcome to NetSpace Navigator</h1>
+
+    <div class="search-box">
+      <form>
+        <input type="text" placeholder="Search the Web...">
+        <input type="submit" value="Search">
+      </form>
+    </div>
+
+    <div class="links">
+      <a href="#">Net Search</a>
+      <a href="#">What's New</a>
+      <a href="#">Cool Sites</a>
+      <a href="#">Net Directory</a>
+    </div>
+
+    <div class="footer">
+      <p>This is a visual recreation inspired by 1995 browser interfaces.<br>
+      Not affiliated with any original company. For nostalgic purposes only.</p>
+    </div>
   </div>
 
-  <div class="links">
-    <a href="#">Net Search</a>
-    <a href="#">What's New</a>
-    <a href="#">Cool Sites</a>
-    <a href="#">Net Directory</a>
-  </div>
+  <script>
+    setTimeout(() => {
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }, 3000); // 3 segundos
+  </script>
 
-  <div class="footer">
-    <p>This is a visual recreation inspired by 1995 browser interfaces.<br>
-    Not affiliated with any original company. For nostalgic purposes only.</p>
-  </div>
 </body>
 </html>
