@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Netstalgia - Museo del Internet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffffff;
+            color: #333;
+            margin-top: 100px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .timeline {
+            font-size: 1.5em;
+            margin-top: 50px;
+        }
+        .year {
+            display: inline-block;
+            margin: 0 15px;
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Netstalgia: Museo del Internet</h1>
+    <div class="timeline">
+        <span class="year">1995</span>
+        <span class="year">2000</span>
+        <span class="year">2005</span>
+        <span class="year">2010</span>
+    </div>
+
+    <script>
+        document.querySelectorAll('.year').forEach(year => {
+            year.onclick = () => {
+                alert('Pronto podrás explorar el año ' + year.innerText);
+            };
+        });
+    </script>
+</body>
+</html>
