@@ -7,6 +7,8 @@
     body {
       margin: 0;
       font-family: "Times New Roman", serif;
+      background-color: #ffffff;
+      color: #000;
     }
 
     #loading {
@@ -25,72 +27,94 @@
 
     #main-content {
       display: none;
-      background-color: #e0e0e0;
-      color: #000;
-      text-align: center;
-      padding: 40px;
     }
 
-    #main-content h1 {
-      font-size: 40px;
-      text-decoration: underline;
+    .navbar {
+      background-color: #c0c0c0;
+      padding: 8px;
+      display: flex;
+      gap: 12px;
+      font-size: 14px;
+      border-bottom: 2px solid #999;
+    }
+
+    .navbar div {
+      background-color: #e0e0e0;
+      padding: 4px 8px;
+      border: 1px solid #999;
+      cursor: pointer;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      text-transform: uppercase;
       color: #003366;
     }
 
-    .links a {
-      display: block;
-      margin: 15px;
-      font-size: 20px;
-      color: blue;
-      text-decoration: underline;
-    }
-
-    .search-box {
+    .sections {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
       margin-top: 30px;
+      font-size: 18px;
     }
 
-    input[type="text"] {
-      width: 300px;
-      padding: 5px;
-      font-size: 16px;
-    }
-
-    input[type="submit"] {
-      padding: 5px 10px;
-      font-size: 16px;
+    .sections div {
+      border: 1px solid #999;
+      padding: 10px;
+      width: 180px;
+      background-color: #f5f5f5;
     }
 
     .footer {
-      margin-top: 60px;
-      font-size: 12px;
-      color: #444;
+      text-align: center;
+      font-size: 13px;
+      color: #555;
+      padding: 30px 10px;
+    }
+
+    .footer a {
+      color: blue;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
   <div id="loading">Conectando a NetSpace...</div>
 
   <div id="main-content">
-    <h1>Welcome to NetSpace Navigator</h1>
-
-    <div class="search-box">
-      <form>
-        <input type="text" placeholder="Search the Web...">
-        <input type="submit" value="Search">
-      </form>
+    <div class="navbar">
+      <div>What's New</div>
+      <div>What's Cool</div>
+      <div>Upgrades</div>
+      <div>Net Search</div>
+      <div>Net Directory</div>
+      <div>Newsgroups</div>
     </div>
 
-    <div class="links">
-      <a href="#">Net Search</a>
-      <a href="#">What's New</a>
-      <a href="#">Cool Sites</a>
-      <a href="#">Net Directory</a>
+    <div class="hero">
+      <h1>Welcome to NetSpace</h1>
+    </div>
+
+    <div class="sections">
+      <div>Exploring the Net</div>
+      <div>Company & Products</div>
+      <div>NetSpace Store</div>
+      <div>News & Reference</div>
+      <div>Assistance</div>
+      <div>Community</div>
     </div>
 
     <div class="footer">
-      <p>This is a visual recreation inspired by 1995 browser interfaces.<br>
-      Not affiliated with any original company. For nostalgic purposes only.</p>
+      <p><strong>NetSpace Security Upgrade Available</strong><br>
+      Find out how NetSpace is providing upgrades to customers and then <a href=\"#\">download</a> the final software. Users of the expired Navigator 1.2 beta can also <a href=\"#\">evaluate</a> the upgrade.</p>
     </div>
   </div>
 
@@ -98,9 +122,7 @@
     setTimeout(() => {
       document.getElementById('loading').style.display = 'none';
       document.getElementById('main-content').style.display = 'block';
-    }, 3000); // 3 segundos
+    }, 3000);
   </script>
-
 </body>
 </html>
-
